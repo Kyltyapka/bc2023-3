@@ -10,13 +10,13 @@ fs.readFile("data.json", "utf8", (err, data) => {
         let minA = null;
 
         for (const active of jsonString) {
-            if (active.value < value) {
+            if (active.value < minV) {
                 minV = active.value;
                 minA = active;
             }
         }
 
-        fs.writeFile('output.txt', `${minA.txt} : ${minactive.value}`, (err) => {
+        fs.writeFile('output.txt', `${minA.txt} : ${minA.value}`, (err) => {
 
             if (err === null) {
                 console.log("DONE2");
